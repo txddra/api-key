@@ -12,7 +12,7 @@
 // // Recipe API- https://developer.edamam.com/ (uses two key code)
 // // Superheroes API- https://superheroapi.com/index.html
 // // Movies API- https://www.omdbapi.com/
-// // Sports API - https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=Arsenal
+// // Sports API - https://allsportsapi.com/
 // // News API - https://newsapi.org/
 // // Harvard Art Museum API - https://www.harvardartmuseums.org/collections/api
 
