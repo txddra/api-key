@@ -25,3 +25,12 @@
 // OR
 // Inquirer: https://www.npmjs.com/package/inquirer
 // Read the docs to find out how to use. Pretty intuitive.
+
+
+
+const fetch = require('node-fetch');
+let key = require('./key.js');
+let ingredient = '';
+let url = `https://api.edamam.com/search?q=${ingredient}&app_id=d58665d1&app_key=${key}`;
+
+
