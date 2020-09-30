@@ -30,7 +30,10 @@
 
 const fetch = require('node-fetch');
 let key = require('./key.js');
+let id = require('./id.js')
 let ingredient = '';
-let url = `https://api.edamam.com/search?q=${ingredient}&app_id=d58665d1&app_key=${key}`;
+let url = `https://api.edamam.com/search?q=${ingredient}&app_id=${id}&app_key=${key}`;
 
 
+fetch(url)
+.then((data)=> data.json())
