@@ -52,6 +52,10 @@ console.log(`Tonight you should have some: ${a.recipe.label}`);
 console.log(' ')
 // console.log(`All you need is: ${a.recipe.ingredientLines}/n`)
 console.log(`Here's a link for this recipe: ${a.recipe.url}`)
+console.log(' ')
+console.log(`From ${a.recipe.source}`)
+console.log(' ')
+console.log('---')
     })}
 
 )
