@@ -29,11 +29,99 @@
 
 
 const fetch = require('node-fetch');
+// const axios = require('axios');
+
+//security reasons
 let key = require('./key.js');
-let id = require('./id.js')
-let ingredient = '';
+let id = require('./id.js');
+//whatever string given 
+let ingredient = 'chicken';
 let url = `https://api.edamam.com/search?q=${ingredient}&app_id=${id}&app_key=${key}`;
 
 
+
+
+
 fetch(url)
-.then((data)=> data.json())
+.then((data) => data.json())
+.then((newData) =>{
+    //gives me the hits
+    let arr = newData.hits
+    arr.map((a)=>{
+console.log(`Tonight you should have some: ${a.recipe.label}`);
+console.log(' ')
+// console.log(`All you need is: ${a.recipe.ingredientLines}/n`)
+console.log(`Here's a link for this recipe: ${a.recipe.url}`)
+    })}
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     arr.forEach(element => {
+//     if(element.hits){
+
+//         console.log({element});
+//     //     console.log(`Description: ${element.Description}`)
+//     //     console.log(`Link: ${element.Link}`);
+//     //     console.log(`Category: ${element.Category}`);
+//     //     console.log('')
+//     //     console.log('---')
+//     //     console.log('')
+//         }    });
+// }
+//     )
+// .catch(error => console.log('error'))
+
+
+
+
+
+
+
+// const readline = require('readline');
+
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
+// });
+
+// rl.question(`Give me an ingredient, and I'll give you a recipe `, (ingredient) => {
+  // TODO: Log the answer in a database
+// fetch(url)
+//  .then((data)=> data.json())
+     
+ 
+
+// .then((newData)=> console.log(newData/*`you submitted: ${newData}`*/))
+
+//   console.log(`Thank you for your valuable feedback: ${ingredient}`)
+// .catch(error => console.log('Error!'))
+//   rl.close();
+// });
+
+
+// // let whatsForDinner = new Promise
+
+
+// function axiosGet(url){
+//     axios.get(url).then((users)=> console.log(users.data))
+//     .catch((err)=> console.log(err));
+
+// }
+
+// axiosGet(url)
