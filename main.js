@@ -34,13 +34,22 @@ const fetch = require('node-fetch');
 //security reasons
 let key = require('./key.js');
 let id = require('./id.js');
+
+
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question(`Give me an ingredient, and I'll give you a recipe `, (ingredient) => {
+//   TODO: Log the answer in a database
+
 //whatever string given 
-let ingredient = 'chicken';
+// let ingredient = '';
 let url = `https://api.edamam.com/search?q=${ingredient}&app_id=${id}&app_key=${key}`;
-
-
-
-
 
 fetch(url)
 .then((data) => data.json())
@@ -59,6 +68,16 @@ console.log('---')
     })}
 
 )
+
+  
+.catch(error => console.log('Error!'))
+  rl.close();
+});
+
+
+
+
+
 
 
 
