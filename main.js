@@ -46,7 +46,7 @@ const rl = readline.createInterface({
 
 rl.question(`Give me an ingredient, and I'll give you a recipe `, (ingredient) => {
 //   TODO: Log the answer in a database
-
+console.log(' ')
 //whatever string given 
 // let ingredient = '';
 let url = `https://api.edamam.com/search?q=${ingredient}&app_id=${id}&app_key=${key}`;
